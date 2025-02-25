@@ -1,9 +1,45 @@
+const senhas_genericas = ['1234','123456','4321','654321','abcd','qwert','qwert1234','abcd1234'];
 
-let password;
+function validarsenha(senha){
+    const numeros = /[0-9]/.test(senha);
+    const minuscula = /[a-z]/.test(senha);
+    const maiuscula = /[A-Z]/.test(senha);
+    const especial = /[!@#$%&*(),.?":{}|<>]/.test(senha);
+    
+    
+    if (!maiuscula){
+        return "considere ter letras maiúsculas e minúsculas";
+    } 
+    
+    else if (!minuscula){
+        return "considere ter letras maiúsculas e minúsculas";
+    }
+    
+    else if (!numeros){
+        return "sua senha deve conter pelo menos um numero";
+    }
 
-document.getElementById("verificação").onclick = function(){
-    password = document.getElementById("Password").value;
+    else if (!especial){
+        return "sua senha deve conter caracteres especiais";
+    }
 
+    else {
+        return "Essa senha é segura!";
+    }
 }
+
+
+
+
+document.getElementById("formularioSenha").addEventListener("submit",function(event){
+    event.preventDefault();
+
+    let userInput = document.getElementById("senha").value;
+    console.log('sua senha: ' + userInput);
+    console.log(validarsenha("senha" + userInput));
+});
+
+
+
 
 

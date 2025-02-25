@@ -12,4 +12,8 @@
      - o "parseInt" converte para o inteiro.
      - Útil caso encontre um NaN
      ---
-    
+    console.log(umaString.indexOf('algo'));
+     - Retonará a posição da palavra "algo" no texto.
+     ---
+    const maiuscula = /[A-Z]/.test(senha);
+     - O .test retorna um boolean
