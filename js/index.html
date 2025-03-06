@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Passwordfeedback
-    </title>
+    <title>Passwordfeedback</title>
+    <link rel="stylesheet" href="./style.css">
     <style>
         body{
             text-align: center;
@@ -13,14 +13,27 @@
 </head>
 <body>
     
-    <h1>Password Feedback</h1>
+  
+    <main>
+        <article>
+          <h1>Password Feedback</h1>
+          <p>
+            <form id="formularioSenha">
+                <label for ="senha"> Digite a sua senha</label>
+            </p>
 
+            <p>
+
+                <input type="text" id = "senha" nome="senha" required>
+                <button type="submit">Verificar</button>
+             
+
+            </p>
+                
+        </form>
+        </article>
+      </main>
         
-   <form id="formularioSenha">
-    <label for ="senha"> Digite a sua senha:  </label>
-    <input type="text" id = "senha" nome="senha" required>
-    <button type="submit">Verificar</button>
- </form>
 
    <p id ="feedback"></p>
 

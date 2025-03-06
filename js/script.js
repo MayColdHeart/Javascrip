@@ -1,5 +1,7 @@
 const senhas_genericas = ['1234','123456','4321','654321','abcd','qwert','qwert1234','abcd1234'];
 
+const feedback = document.querySelector('.resultado');
+
 function validarsenha(senha){
     const numeros = /[0-9]/.test(senha);
     const minuscula = /[a-z]/.test(senha);
@@ -36,10 +38,14 @@ document.getElementById("formularioSenha").addEventListener("submit",function(ev
 
     let userInput = document.getElementById("senha").value;
     console.log('sua senha: ' + userInput);
-    console.log(validarsenha("senha" + userInput));
+    (validarsenha("senha" + userInput));
+
+    
+    
+
 });
 
-
+resultado.innerHTML += `<p>${senha.value} </p>`;
 
 
 
